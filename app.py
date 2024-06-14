@@ -45,15 +45,6 @@ else:
 # Seção de sugestão de viagem
 st.header('Sugestão de Viagem')
 
-
-
-
-
-
-
-
-
-
 # Fazer a solicitação para a página web
 r = requests.get("https://buzzfeed.com.br/post/todo-estado-brasileiro-tem-um-lugar-que-voce-precisa-visitar-antes-de-morrer")
 
@@ -75,9 +66,6 @@ for entry in entries:
 selected_state = st.selectbox('Selecione um estado', df_expenses['Estado'].unique())
 
 # Exibir o ponto turístico correspondente ao estado selecionado
-
-    
-
 def ponto_turistico(selected_state):
  if selected_state == "Acre":
         return st.header(state_tourist_spots[selected_state]), st.image('https://img.buzzfeed.com/buzzfeed-static/static/2019-05/24/13/asset/buzzfeed-prod-web-02/sub-buzz-23323-1558717922-1.jpg'), st.text('''Se você só sabe o nome da capital do Acre (dica: é Rio Branco!) já pode atualizar a
